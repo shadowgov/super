@@ -1,6 +1,6 @@
 {
     "name": "super"
-  , "version": "0.0.1"
+  , "version": "0.0.2"
   , "description": "Extend everything."
   , "keywords": ["extend", "inherits", "super"]
   , "author": "Veselin Todorov <hi@vesln.com>"
