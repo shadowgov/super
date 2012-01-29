@@ -1,8 +1,8 @@
 {
     "name": "super"
-  , "version": "0.0.2"
+  , "version": "0.1.0"
   , "description": "Extend everything."
-  , "keywords": ["extend", "inherits", "super"]
+  , "keywords": ["extend", "inherits", "super", "clone"]
   , "author": "Veselin Todorov <hi@vesln.com>"
   , "devDependencies": {
       "mocha": "0.3.3"
