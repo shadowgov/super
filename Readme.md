@@ -36,6 +36,12 @@ var baz = extend(bar, foo);
 
 console.log(baz);
 
+// Clone
+
+var clone = require('super');
+var bar = { foo: 3 };
+var barClone = clone(bar);
+
 ```
 ## Requirements
 
