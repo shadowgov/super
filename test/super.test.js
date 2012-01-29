@@ -27,4 +27,9 @@ describe('super', function() {
     extend({}, foo).should.eql({ bar: 'baz' });
     extend(foo, { baz: 1 }).should.eql({ bar: 'baz', baz: 1 });
   });
+  
+  it('should be able to be used as clone', function() {
+    var foo = { bar: 'baz' };
+    extend(foo).should.eql(foo);
+  });
 });
