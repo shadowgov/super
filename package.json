@@ -6,7 +6,8 @@
   , "author": "Veselin Todorov <hi@vesln.com>"
   , "devDependencies": {
       "mocha": "*",
-      "chai": "*"
+      "chai": "*",
+      "folio": "0.2.x"
   }
   , "repository" : {
       "type" : "git",
