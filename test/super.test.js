@@ -5,19 +5,23 @@
  * Licensed under the MIT License.
  */
 
-/**
+/*!
  * Test Dependencies.
  */
 
 var chai = require('chai')
   , should = chai.should();
 
-/**
+/*!
  * Module Dependancies
  */
 
-var extend = require('../');
-var EventEmitter = require('events').EventEmitter;
+var extend = require('../')
+  , EventEmitter = require('events').EventEmitter;
+
+/*!
+ * Test Fixtures
+ */
 
 function Foo() {};
 
