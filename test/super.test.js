@@ -9,21 +9,19 @@
  * Test Dependencies.
  */
 
-var chai = require('chai')
-  , should = chai.should();
+if ('undefined' === typeof isBrowser) {
+  var chai = require('chai')
+    , extend = require('../')
+}
 
-/*!
- * Module Dependancies
- */
-
-var extend = require('../')
-  , EventEmitter = require('events').EventEmitter;
+var should = chai.should()
 
 /*!
  * Test Fixtures
  */
 
-function Foo() {};
+function EventEmitter () {};
+function Foo () {};
 
 describe('super', function() {
   it('should inherit methods', function() {
