@@ -5,8 +5,9 @@
   , "keywords": ["extend", "inherits", "super", "clone"]
   , "author": "Veselin Todorov <hi@vesln.com>"
   , "devDependencies": {
-      "mocha": "0.3.3"
-    , "should": "0.3.2"
+      "mocha": "*",
+      "chai": "*",
+      "folio": "0.2.x"
   }
   , "repository" : {
       "type" : "git",
@@ -17,5 +18,5 @@
       "test": "make test"
   }
   , "main": "./lib/super"
-  , "engines": { "node": ">= 0.6.0 < 0.7.0" }
+  , "engines": { "node": ">= 0.6.0" }
 }

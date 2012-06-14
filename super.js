@@ -5,6 +5,21 @@
  * Licensed under the MIT License.
  */
 
+!function (name, definition) {
+  if (typeof module != 'undefined') module.exports = definition();
+  else if (typeof define == 'function' && typeof define.amd  == 'object') define(definition);
+  else this[name] = definition();
+}('extend', function () {
+  var module = {};
+
+
+/*!
+ * super - Extend everything.
+ *
+ * Author: Veselin Todorov <hi@vesln.com>
+ * Licensed under the MIT License.
+ */
+
 /*!
  * Module Dependencies.
  */
@@ -80,3 +95,7 @@ function extend (arr) {
   });
   return main;
 };
+
+
+  return module.exports;
+});

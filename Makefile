@@ -1,12 +1,15 @@
 TESTS = test/*.test.js
+REPORTER = dot
+
+make:
+	@node support/build
 
 test:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
-	--require should \
-	--reporter spec \
-	$(TESTS)
+		--reporter $(REPORTER) \
+		$(TESTS)
 
 clean:
 	rm -f examples/tmp/*
 
-.PHONY: test clean
+.PHONY: all test clean
