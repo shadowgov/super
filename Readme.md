@@ -2,59 +2,93 @@
 
 # super - Extend everything.
 
-http://github.com/vesln/super
+> Your best friend when it comes to extending and inheritance.
 
-## Description
-	
-super is super simple library that will be your best friend, when it comes to inheritance/extending.
-Nothing fancy, just something that I use a lot.
+## Installation
 
-## Synopsis
+Super is available for both server-side and the browser.
 
-JavaScript:
+### Node.js
+
+Package is available through [npm](http://npmjs.org):
+
+    npm install super
+
+### Browser
+
+Download the package and include either the normal or minimized build in your HTML header.
+
+    <script src="super.js" type="text/javascript"></script>
+    <script src="super.min.js" type="text/javascript"></script>
+
+## Getting Started
+
+It can be used is a replacement for node's `util.inherits`. Especially useful when building 
+modules for both node and the browser.
 
 ```javascript
-
-var extend = require('super');
+var inherits = require('super');
 
 // Classes, actually it uses util.inherits.
 
 var EventEmitter = require('events').EventEmitter;
 function Foo() {};
 
-extend(Foo, EventEmitter);
+inherits(Foo, EventEmitter);
 var foo = new Foo;
 
-console.log(foo instanceof EventEmitter);
-console.log(Foo.super_ == EventEmitter);
+console.log(foo instanceof EventEmitter); // true
+console.log(Foo.super_ == EventEmitter); // true
+```
 
-// Objects
+It can also be used for simple merging or cloning of objects.
 
+```javascript
+// merge
 var foo = { bar: 'baz' };
 var bar = { foo: 3 };
-var baz = extend(bar, foo);
+var baz = inherits(bar, foo);
 
 console.log(baz);
 
-// Clone
-
-var clone = require('super');
+// clone
 var bar = { foo: 3 };
 var barClone = clone(bar);
-
 ```
-## Requirements
 
-- NPM (http://npmjs.org/)
-- Node.js 0.6 (http://nodejs.org/)
+And finally, it also provides a helper that will allow for object to easily be
+extended, similiar to the style in Backbone.js.
 
-## Install
+```javascript
+function Foo () {
+  this._konstructed = true;
+  if (this.initialize) this.initialize();
+}
 
-	$ npm install super
+Foo.extend = inherits.extend;
+
+var Bar = Foo.extend({
+  initialize: function () {
+    this._isBar = true;
+  }
+});
+
+var foo = new Foo()
+  , bar = new Bar();
+
+console.log(foo._konstructed); // true
+console.log(bar._konstructed); // true
+console.log(foo._isBar); // undefined
+console.log(bar._isBar); // true
+```
 
 ## Tests
 
-	$ make test
+Tests are writting in [Mocha](http://github.com/visionmedia/mocha) using 
+the [Chai](http://chaijs.com) `should` BDD assertion library. To make sure you 
+have that installed, clone this repo, install dependacies using `npm install`.
+
+    $ make test
 
 ## License
 
