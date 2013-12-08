@@ -82,11 +82,23 @@ console.log(bar._isBar); // true
 
 ## Tests
 
-Tests are writting in [Mocha](http://github.com/visionmedia/mocha) using
-the [Chai](http://chaijs.com) `should` BDD assertion library. To make sure you
-have that installed, clone this repo, install dependacies using `npm install`.
+All:
 
-    $ make test
+```
+$ make test
+```
+
+Node:
+
+```
+$ make test-node
+```
+
+Browser:
+
+```
+$ make test-browser
+```
 
 ## License
 

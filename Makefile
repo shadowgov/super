@@ -8,12 +8,19 @@ browser: node_modules lib/* components
 components: node_modules component.json
 	@./node_modules/.bin/component-install --dev
 
-test:
+build: components lib/*
+	@./node_modules/.bin/component-build --dev
+
+test: test-node test-browser
+
+test-node:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
+		--require test/bootstrap/node \
 		--reporter $(REPORTER) \
 		$(TESTS)
 
-clean:
-	rm -f examples/tmp/*
+test-browser: build
+	@./node_modules/karma/bin/karma start \
+		--single-run --browsers PhantomJS,Chrome,Firefox
 
 .PHONY: all test clean

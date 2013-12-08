@@ -1,8 +1,3 @@
-if ('undefined' === typeof isBrowser) {
-  var chai = require('chai')
-    , inherits = require('../')
-}
-
 var should = chai.should()
 
 function EventEmitter () {};

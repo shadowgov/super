@@ -21,3 +21,5 @@ Thumbs.db
 *.esproj
 nbproject
 /super.js
+/build/
+/components/
