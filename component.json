@@ -1,0 +1,11 @@
+{
+  "name": "super",
+  "repo": "vesln/super",
+  "description": "Extend, inherit and clone",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "lib/super.js",
+  "scripts": [
+    "lib/super.js"
+  ]
+}

@@ -1,24 +1,9 @@
-/*!
- * super - Extend everything.
- *
- * Author: Veselin Todorov <hi@vesln.com>
- * Licensed under the MIT License.
- */
-
-/*!
- * Test Dependencies.
- */
-
 if ('undefined' === typeof isBrowser) {
   var chai = require('chai')
     , inherits = require('../')
 }
 
 var should = chai.should()
-
-/*!
- * Test Fixtures
- */
 
 function EventEmitter () {};
 function Foo () {};

@@ -14,16 +14,14 @@ Package is available through [npm](http://npmjs.org):
 
     npm install super
 
-### Browser
+And also through [component](http://component.io):
 
-Download the package and include either the normal or minimized build in your HTML header.
+    component install vesln/super
 
-    <script src="super.js" type="text/javascript"></script>
-    <script src="super.min.js" type="text/javascript"></script>
 
 ## Getting Started
 
-It can be used is a replacement for node's `util.inherits`. Especially useful when building 
+It can be used is a replacement for node's `util.inherits`. Especially useful when building
 modules for both node and the browser.
 
 ```javascript
@@ -84,8 +82,8 @@ console.log(bar._isBar); // true
 
 ## Tests
 
-Tests are writting in [Mocha](http://github.com/visionmedia/mocha) using 
-the [Chai](http://chaijs.com) `should` BDD assertion library. To make sure you 
+Tests are writting in [Mocha](http://github.com/visionmedia/mocha) using
+the [Chai](http://chaijs.com) `should` BDD assertion library. To make sure you
 have that installed, clone this repo, install dependacies using `npm install`.
 
     $ make test
@@ -94,7 +92,7 @@ have that installed, clone this repo, install dependacies using `npm install`.
 
 MIT License
 
-Copyright (C) 2012 Veselin Todorov
+Copyright (C) 2012-2013 Veselin Todorov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
