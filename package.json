@@ -1,22 +1,29 @@
 {
-    "name": "super"
-  , "version": "0.2.1"
-  , "description": "Extend everything."
-  , "keywords": ["extend", "inherits", "super", "clone"]
-  , "author": "Veselin Todorov <hi@vesln.com>"
-  , "devDependencies": {
-      "mocha": "*",
-      "chai": "*",
-      "folio": "0.2.x"
+  "name": "super",
+  "version": "0.2.1",
+  "description": "Extend everything.",
+  "keywords": [
+    "extend",
+    "inherits",
+    "super",
+    "clone"
+  ],
+  "author": "Veselin Todorov <hi@vesln.com>",
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "component": "~0.18.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/vesln/super.git"
+  },
+  "homepage": "http://github.com/vesln/super",
+  "scripts": {
+    "test": "make test"
+  },
+  "main": "./lib/super",
+  "engines": {
+    "node": ">= 0.6.0"
   }
-  , "repository" : {
-      "type" : "git",
-      "url" : "http://github.com/vesln/super.git"
-  }
-  , "homepage": "http://github.com/vesln/super"
-  , "scripts": {
-      "test": "make test"
-  }
-  , "main": "./lib/super"
-  , "engines": { "node": ">= 0.6.0" }
 }
