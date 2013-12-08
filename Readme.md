@@ -100,6 +100,12 @@ Browser:
 $ make test-browser
 ```
 
+Test coverage:
+
+```
+$ make coverage
+```
+
 ## License
 
 MIT License

@@ -23,4 +23,8 @@ test-browser: build
 	@./node_modules/karma/bin/karma start \
 		--single-run --browsers PhantomJS,Chrome,Firefox
 
-.PHONY: all test clean
+coverage:
+	@./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/*.test.js \
+		-- --require test/bootstrap/node
+
+.PHONY: all test coverage
