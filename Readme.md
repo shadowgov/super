@@ -1,8 +1,6 @@
 [![Build Status](https://secure.travis-ci.org/vesln/super.png)](http://travis-ci.org/vesln/super)
 
-# super - Extend everything.
-
-> Your best friend when it comes to extending and inheritance.
+# super
 
 ## Installation
 
