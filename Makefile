@@ -23,6 +23,10 @@ test-browser: build
 	@./node_modules/karma/bin/karma start \
 		--single-run --browsers PhantomJS,Chrome,Firefox
 
+test-travisci:
+	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
+	@make test-node
+
 coverage:
 	@./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/*.test.js \
 		-- --require test/bootstrap/node
